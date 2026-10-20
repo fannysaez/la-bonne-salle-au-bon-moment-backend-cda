@@ -27,7 +27,11 @@ app.use('/api/roles', roleRouter);
 app.use('/api/users', userRouter);
 app.use('/api/rooms', roomRouter);
 app.use('/api/reservations', reservationRouter);
-app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec, {
+  swaggerOptions: {
+    persistAuthorization: true
+  }
+}));
 
 app.get("/", (req: Request, res: Response) => { res.send("Hello World!"); });
 app.use((req: Request, res: Response) => { res.status(404).json({ message: "Route non trouvée" }); });

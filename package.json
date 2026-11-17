@@ -7,7 +7,8 @@
   "type": "module",
   "main": "app.ts",
   "scripts": {
-    "start": "node src/app.ts"
+    "start": "node src/app.ts",
+    "test" : "vitest run"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
@@ -30,6 +31,7 @@
     "@types/node": "^26.4.1",
     "@types/swagger-jsdoc": "^6.0.4",
     "@types/swagger-ui-express": "^4.1.8",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^5.1.0"
   }
 }
